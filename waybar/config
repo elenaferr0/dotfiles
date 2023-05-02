@@ -1,0 +1,135 @@
+{
+  "include": "~/.config/waybar/configs/custom_modules/modules",
+  "layer": "top",
+  "height": 40,
+  "margin-top": 4,
+  "margin-left": 4,
+  "margin-bottom": 0,
+  "margin-right": 4,
+  "spacing": 4,
+  "modules-left": [
+    "custom/separator",
+    "custom/arch",
+    "cpu",
+    "memory",
+    "temperature",
+    "custom/separator",
+    "custom/window-name",
+    "tray"
+  ],
+
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/pacman-update",
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "network",
+    "custom/airplane",
+    "custom/powermenu"
+  ],
+
+  "tray": {
+    "icon-size": 40,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "<b>{:%a, %d %b %Y • %R} </b>",
+    "interval": 30,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "max-length": 10,
+    "tooltip": false
+  },
+  "memory": {
+    "interval": 30,
+    "format": " {used}GiB",
+    "max-length": 10
+  },
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "{icon} {percent}%",
+    "tooltip": false,
+    "format-icons": ["", ""]
+  },
+  "network": {
+    "format-wifi": " {essid}",
+    "format-ethernet": " wired",
+    "tooltip": false,
+    "format-disconnected": "󰖪",
+    "on-click": "gnome-control-center wifi"
+  },
+  "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "婢",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click-right": "pavucontrol",
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+	"format": "{icon} {capacity}%",
+        "format-charging": " {capacity}% [charging]",
+        "format-plugged": " {capacity}% [plugged]",
+        "format-alt": "{icon} {capacity}%",
+        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""],
+        "max-length": 25,
+      "tooltip": false
+  },
+  "custom/separator": {
+    "format": " "
+  },
+  "custom/window-name": {
+    "format": "<b>{}</b>",
+    "interval": 1,
+    "exec": "hyprctl activewindow | grep class | awk '{print $2}'"
+  },
+  "custom/pacman-update": {
+    "format": " {} update(s)",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "signal": 8,
+    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+    "on-click": "~/.config/.scripts/pacman_update.sh && notify-send 'The system has been updated' "
+  },
+  "custom/arch": {
+    "format": "󰣇 "
+  },
+  "temperature": {
+    "thermal-zone": 0,
+    "critical-threshold": 80,
+    "format": "󰈸 {temperatureC}°C"
+  },
+
+  "custom/wrap-left": {
+    "format": "<b>[</b>"
+  },
+
+  "custom/wrap-right": {
+    "format": "<b>]</b>"
+  },
+  "custom/powermenu": {
+     "format": "",
+     "on-click": "bash ~/.config/.scripts/powermenu/powermenu.sh",
+     "tooltip": false
+  },
+}
