@@ -1,7 +1,7 @@
 # Hyprland rice dotfiles
 
-![[htop_neofetch.png]]
+![](./screenshots/htop_neofetch.png)
 
-![[powermenu.png]]
+![](./screenshots/powermenu.png)
 
-![[wofi_dunst.png]]
+![](./screenshots/wofi_dunst.png)
