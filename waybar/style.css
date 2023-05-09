@@ -19,7 +19,11 @@ window#waybar {
 
 #custom-notifications {
   padding: 0px 15px 0px 15px;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+tooltip {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 tooltip label {

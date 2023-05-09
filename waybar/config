@@ -13,7 +13,6 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/notifications",
     "custom/separator",
     "custom/window-name",
     "tray"
@@ -22,6 +21,7 @@
   "modules-center": ["clock"],
   "modules-right": [
     "custom/pacman-update",
+    "custom/notifications",
     "battery",
     "backlight",
     "pulseaudio",
@@ -100,11 +100,13 @@
     "format": " "
   },
   "custom/notifications": {
-    "format": "󰂚",
-    "interval": 10,
+    "format": "{}",
+    "interval": 5,
     "tooltip": true,
     "return-type": "json",
-    "exec": "python3 ~/.config/.scripts/notifications.py"
+    "exec": "python3 ~/.config/.scripts/notifications.py",
+    "exec-if": "[[ $(dunstctl count history) != 0 ]]",
+    "on-click": "dunstctl set-paused toggle"
   },
   "custom/window-name": {
     "format": "<b>{}</b>",
