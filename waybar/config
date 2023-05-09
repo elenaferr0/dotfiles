@@ -13,6 +13,7 @@
     "cpu",
     "memory",
     "temperature",
+    "custom/notifications",
     "custom/separator",
     "custom/window-name",
     "tray"
@@ -37,9 +38,9 @@
   "clock": {
     "format": "<b>{:%a, %d %b %Y • %R} </b>",
     "interval": 30,
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "on-click": "gnome-calendar"
   },
-
   "cpu": {
     "interval": 10,
     "format": " {usage}%",
@@ -60,8 +61,8 @@
   "network": {
     "format-wifi": " {essid}",
     "format-ethernet": " wired",
-    "tooltip": false,
-    "format-disconnected": "󰖪",
+    "format-disconnected": " disconnected",
+	"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz",
     "on-click": "gnome-control-center wifi"
   },
   "pulseaudio": {
@@ -98,6 +99,13 @@
   "custom/separator": {
     "format": " "
   },
+  "custom/notifications": {
+    "format": "󰂚",
+    "interval": 10,
+    "tooltip": true,
+    "return-type": "json",
+    "exec": "python3 ~/.config/.scripts/notifications.py"
+  },
   "custom/window-name": {
     "format": "<b>{}</b>",
     "interval": 1,
@@ -109,7 +117,7 @@
     "exec": "checkupdates | wc -l",
     "signal": 8,
     "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-    "on-click": "~/.config/.scripts/pacman_update.sh && notify-send 'The system has been updated' "
+    "on-click": "~/.config/.scripts/pacman_update.sh && notify-send 'The system has been updated' " 
   },
   "custom/arch": {
     "format": "󰣇 "

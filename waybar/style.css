@@ -17,6 +17,15 @@ window#waybar {
   padding: 0px 15px 0px 15px;
 }
 
+#custom-notifications {
+  padding: 0px 15px 0px 15px;
+  font-size: 20px;
+}
+
+tooltip label {
+  padding: 10px;
+}
+
 #cpu,
 #memory,
 #backlight,
