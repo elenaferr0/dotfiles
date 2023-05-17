@@ -1,19 +1,13 @@
-require "paq" {
-    "savq/paq-nvim", -- Let Paq manage itself
-
-    "neovim/nvim-lspconfig",
-
-    { "lervag/vimtex",                   opt = true }, -- Use braces when passing options
-
-    { 'nvim-treesitter/nvim-treesitter', run = function() vim.cmd 'TSUpdate' end },
-}
-
 require("catppuccin").setup({
     flavour = "mocha",
     transparent_background = true
 })
 
 require 'visimp' {
+    autopairs = {},
+    comment = {},
+    gitsigns = {},
+    icons = {},
     languages = {
         'c',
         'java',
@@ -21,7 +15,7 @@ require 'visimp' {
         'json',
         'latex',
         'python',
-        'lua',
+        'lua'
     }
 }
 
@@ -60,7 +54,51 @@ vim.g.nvim_tree_icons = {
         symlink = "",
     },
 }
--- setup must be called before loading
+
+local tabline_config = {
+    enable = true,
+    options = {
+        section_separators = { '', '' },
+        component_separators = { '', '' },
+        show_tabs_always = true,
+        show_devicons = true,
+        show_bufnr = true,
+    }
+}
+require('tabline').setup(tabline_config)
+
+local lualine_config = {
+    options = {
+        theme = 'palenight',
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
+    },
+    sections = {
+        lualine_a = { 'mode' },
+        lualine_b = { { 'branch', icon = '' }, 'diff' },
+        lualine_c = { 'filename' },
+        lualine_x = { 'filetype' },
+        lualine_y = { 'progress' },
+        lualine_z = { 'location' }
+    },
+    tabline = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = { require 'tabline'.tabline_buffers },
+        lualine_x = { require 'tabline'.tabline_tabs },
+        lualine_y = {},
+        lualine_z = {},
+    }
+}
+require('lualine').setup(lualine_config)
+
+local telescope_config = {
+    pickers = {
+        find_files = { theme = 'dropdown' }
+    }
+}
+require('telescope').setup(telescope_config)
+
 vim.cmd.colorscheme "catppuccin"
 vim.o.relativenumber = true
 vim.o.number = true
@@ -68,9 +106,8 @@ vim.opt.colorcolumn = '0'
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-
--- vim.cmd("set expandtab");
 vim.cmd("command! T NvimTreeToggle")
+vim.cmd("set splitbelow")
 
 local arrow_keys = { '<Up>', '<Down>', '<Left>', '<Right>' }
 
@@ -80,3 +117,16 @@ for _, key in ipairs(arrow_keys) do
     -- vim.api.nvim_set_keymap('i', key, '<Nop>', { noremap = true })
     vim.api.nvim_set_keymap('v', key, '<Nop>', { noremap = true })
 end
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fm', builtin.marks, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- buffer navigation
+vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bn', ':bn<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>bp', ':bp<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>be', ':enew<CR>', { noremap = true })

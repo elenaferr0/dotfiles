@@ -1,5 +1,4 @@
 {
-  "include": "~/.config/waybar/configs/custom_modules/modules",
   "layer": "top",
   "height": 40,
   "margin-top": 4,
@@ -14,8 +13,8 @@
     "memory",
     "temperature",
     "custom/separator",
-    "custom/window-name",
-    "tray"
+    "tray",
+    "wlr/workspaces"
   ],
 
   "modules-center": ["clock"],
@@ -23,13 +22,22 @@
     "custom/pacman-update",
     "custom/notifications",
     "battery",
-    "backlight",
+    // "backlight",
     "pulseaudio",
     "network",
     "custom/airplane",
     "custom/powermenu"
   ],
-
+  "wlr/workspaces": {
+    "format": "{name}:{icon}",
+    "on-click": "activate",
+    "all-outputs": false,
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": "",
+    },
+  },
   "tray": {
     "icon-size": 40,
     "spacing": 10
@@ -83,7 +91,7 @@
 	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
   "battery": {
-    "interval": 60,
+    "interval": 10,
     "states": {
       "warning": 30,
       "critical": 15
@@ -118,8 +126,8 @@
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "signal": 8,
-    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
-    "on-click": "~/.config/.scripts/pacman_update.sh && notify-send 'The system has been updated' " 
+    "on-click": "alacritty -e pacman -Syu && notify-send 'The system has been updated' ",
+    "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]"
   },
   "custom/arch": {
     "format": "󰣇 "

@@ -22,6 +22,9 @@ window#waybar {
   font-size: 18px;
 }
 
+#tray {
+    font-size: 16px;
+}
 tooltip {
   background: rgba(0, 0, 0, 0.9);
 }
@@ -153,5 +156,3 @@ tooltip label {
 #custom-dot-alt {
   color: #a5adcb;
 }
-
-/*# sourceMappingURL=style.css.map */
