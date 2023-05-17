@@ -1,0 +1,16 @@
+ignore-empty-password
+show-failed-attempts
+font=DS-Digital
+font-size=120
+daemonize
+image=~/pictures/Wallpapers/National_Park_Nord.png
+indicator-caps-lock
+indicator-idle-visible
+clock
+datestr=%-d %b %y
+timestr=%H:%M
+effect-blur=7x5
+indicator-radius=200
+inside-color=ffffff00
+indicator-caps-lock
+text-color=ffffff
