@@ -6,6 +6,9 @@ require("catppuccin").setup({
 require 'visimp' {
     autopairs = {},
     comment = {},
+    latex = {
+        texlive = true
+    },
     gitsigns = {},
     icons = {},
     languages = {
@@ -26,34 +29,42 @@ require("nvim-tree").setup({
     },
     renderer = {
         group_empty = true,
+        icons = {
+            glyphs = {
+                default = "",
+                symlink = "",
+                git = {
+                    unstaged = "",
+                    staged = "S",
+                    unmerged = "",
+                    renamed = "➜",
+                    deleted = "",
+                    untracked = "U",
+                    ignored = "◌",
+                },
+                folder = {
+                    -- arrow_open = " ",
+                    -- arrow_closed = "",
+                    default = "",
+                    open = "",
+                    empty = "",
+                    empty_open = "",
+                    symlink = "",
+                },
+            },
+        }
+    },
+    hijack_directories = {
+        enable = true,
+        auto_open = true,
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
 })
 
-vim.g.nvim_tree_icons = {
-    default = "",
-    symlink = "",
-    git = {
-        unstaged = "",
-        staged = "S",
-        unmerged = "",
-        renamed = "➜",
-        deleted = "",
-        untracked = "U",
-        ignored = "◌",
-    },
-    folder = {
-        -- arrow_open = " ",
-        -- arrow_closed = "",
-        default = "",
-        open = "",
-        empty = "",
-        empty_open = "",
-        symlink = "",
-    },
-}
+
+local tabline = require('tabline')
 
 local tabline_config = {
     enable = true,
@@ -62,10 +73,11 @@ local tabline_config = {
         component_separators = { '', '' },
         show_tabs_always = true,
         show_devicons = true,
-        show_bufnr = true,
+        show_bufnr = true
     }
 }
-require('tabline').setup(tabline_config)
+
+tabline.setup(tabline_config)
 
 local lualine_config = {
     options = {
@@ -84,8 +96,8 @@ local lualine_config = {
     tabline = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = { require 'tabline'.tabline_buffers },
-        lualine_x = { require 'tabline'.tabline_tabs },
+        lualine_c = { tabline.tabline_buffers },
+        lualine_x = { tabline.tabline_tabs },
         lualine_y = {},
         lualine_z = {},
     }
@@ -108,6 +120,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.cmd("command! T NvimTreeToggle")
 vim.cmd("set splitbelow")
+vim.cmd("autocmd BufWritePost *.md silent! !pandoc -f markdown -t pdf -o %:t:r.pdf %:t:r.md")
 
 local arrow_keys = { '<Up>', '<Down>', '<Left>', '<Right>' }
 
