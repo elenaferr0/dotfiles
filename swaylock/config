@@ -3,7 +3,7 @@ show-failed-attempts
 font=DS-Digital
 font-size=120
 daemonize
-image=~/pictures/Wallpapers/National_Park_Nord.png
+image=~/pictures/Wallpapers/neon_cityscape.jpg
 indicator-caps-lock
 indicator-idle-visible
 clock

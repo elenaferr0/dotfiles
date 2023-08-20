@@ -7,7 +7,7 @@
 }
 
 window#waybar {
-  background: rgba(30, 30, 46, 0.6);
+  background: rgba(39, 39, 51, 0.6);
   border-radius: 20px;
 }
 
@@ -23,7 +23,8 @@ window#waybar {
 }
 
 #tray {
-    font-size: 16px;
+    /* margin: 4px; */
+    font-size: 8px;
 }
 tooltip {
   background: rgba(0, 0, 0, 0.9);

@@ -2,6 +2,8 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use { 'catppuccin/nvim', as = 'catppuccin' }
+    -- use "rebelot/kanagawa.nvim"
+    use 'folke/lsp-colors.nvim'
     use 'lukas-reineke/lsp-format.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'ryanoasis/vim-devicons'
@@ -13,7 +15,6 @@ return require('packer').startup(function(use)
     --     'nvim-telescope/telescope-file-browser.nvim',
     --     requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
     -- }
-    -- use 'donRaphaco/neotex'
     use 'tpope/vim-surround'
     use {
         'nvim-lualine/lualine.nvim',
@@ -24,6 +25,15 @@ return require('packer').startup(function(use)
         requires = { { 'hoob3rt/lualine.nvim', opt = true }, { 'kyazdani42/nvim-web-devicons', opt = true } }
     }
     use 'tomtom/tcomment_vim'
+    use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use 'tpope/vim-repeat'
-    -- use 'vim-pandoc/vim-pandoc'
+    use 'rcarriga/nvim-notify'
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
+    use { "akinsho/toggleterm.nvim", tag = '*' }
 end)

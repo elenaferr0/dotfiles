@@ -45,7 +45,7 @@
 
   "clock": {
     "format": "<b>{:%a, %d %b %Y • %R} </b>",
-    "interval": 30,
+    "interval": 5,
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "on-click": "gnome-calendar"
   },
