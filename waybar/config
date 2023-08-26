@@ -107,12 +107,11 @@
   "custom/separator": {
     "format": " "
   },
-  "custom/notifications": {
-    "format": "{}",
+  "custom/notifications": { "format": "{}",
     "interval": 5,
     "tooltip": true,
     "return-type": "json",
-    "exec": "python3 ~/.config/.scripts/notifications.py",
+    "exec": "",
     "exec-if": "[[ $(dunstctl count history) != 0 ]]",
     "on-click": "dunstctl set-paused toggle"
   },

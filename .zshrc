@@ -25,4 +25,3 @@ export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
 export ANDROID_HOME="/opt/android-sdk/platform-tools"
-alias eww=~/eww/target/release/eww
