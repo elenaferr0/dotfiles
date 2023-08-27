@@ -1,9 +1,4 @@
-# Hyprland rice dotfiles
+# Hyprland eww rice dotfiles
 
-![](./screenshots/btop_neofetch.png)
+![](./screenshots/eww_bg.png)
 
-![](./screenshots/powermenu.png)
-
-![](./screenshots/wofi_dunst.png)
-
-![](./screenshots/nvim.png)
