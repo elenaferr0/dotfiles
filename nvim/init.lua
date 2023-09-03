@@ -258,8 +258,14 @@ local telescope_config = {
     }
 }
 
-telescope.load_extension('notify')
 telescope.setup(telescope_config)
+telescope.load_extension('notify')
+
+require('telekasten').setup({
+    home = vim.fn.expand("~/docs/notes"), -- Put the name of your notes directory here
+})
+
+-- image preview
 
 -- vim.cmd.colorscheme "kanagawa"
 vim.cmd.colorscheme "catppuccin"

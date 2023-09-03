@@ -22,7 +22,10 @@ return require('packer').startup(function(use)
     }
     use {
         'kdheepak/tabline.nvim',
-        requires = { { 'hoob3rt/lualine.nvim', opt = true }, { 'kyazdani42/nvim-web-devicons', opt = true } }
+        requires = {
+            { 'hoob3rt/lualine.nvim',         opt = true },
+            { 'kyazdani42/nvim-web-devicons', opt = true }
+        }
     }
     use 'tomtom/tcomment_vim'
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
@@ -36,4 +39,9 @@ return require('packer').startup(function(use)
         },
     }
     use { "akinsho/toggleterm.nvim", tag = '*' }
+    use {
+        'renerocksai/telekasten.nvim',
+        requires = { 'nvim-telescope/telescope.nvim' }
+    }
+    use { 'justinmk/vim-sneak' }
 end)
