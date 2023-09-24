@@ -2,6 +2,6 @@
 
 source "$CONFIG_DIR/icons.sh"
 
-USAGE=$(istats all | grep 'CPU temp' | awk '{print $3}')
-
-sketchybar --set $NAME label="CPU: $USAGE"
+ISTATS_PATH=$(which istats)
+TEMP=$($ISTATS_PATH cpu | awk '{print $3}')
+sketchybar --set $NAME label="CPU: $TEMP"
