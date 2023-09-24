@@ -24,4 +24,10 @@ eval "$(starship init zsh)"
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
-export ANDROID_HOME="/opt/android-sdk/platform-tools"
+export ANDROID_HOME="$HOME/Android/Sdk"
+export PATH="$PATH:$ANDROID_HOME"
+
+#Tools exporting - it can be need in your case
+export PATH=~/Android/Sdk/platform-tools:$PATH
+export PATH=~/Android/Sdk/tools:$PATH
+export PATH=~/Android/ndk-build:$PATH
