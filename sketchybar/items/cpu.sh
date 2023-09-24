@@ -4,7 +4,7 @@ cpu=(
   padding_right=7
   icon.font="$FONT:Regular:19.0"
   script="$PLUGIN_DIR/cpu.sh"
-  update_freq=120
+  update_freq=60
   updates=on
 )
 

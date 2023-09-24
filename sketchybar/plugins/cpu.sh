@@ -2,6 +2,6 @@
 
 source "$CONFIG_DIR/icons.sh"
 
-USAGE=$(top -l 1 | grep -E '^CPU' | awk '{print $3 + $5}' | sed 's/%//' | paste -sd+ - | bc)
+USAGE=$(istats all | grep 'CPU temp' | awk '{print $3}')
 
-sketchybar --set $NAME icon=$CPU_ICON label="$USAGE%"
+sketchybar --set $NAME label="CPU: $USAGE"
