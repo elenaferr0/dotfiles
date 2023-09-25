@@ -1,28 +1,24 @@
 {
   "layer": "top",
-  "height": 40,
-  "margin-top": 4,
-  "margin-left": 4,
-  "margin-bottom": 0,
-  "margin-right": 4,
+  "height": 30,
   "spacing": 4,
+  "padding-top": 4,
   "modules-left": [
-    "custom/separator",
     "custom/arch",
     "cpu",
     "memory",
     "temperature",
-    "custom/separator",
     "tray",
-    "wlr/workspaces"
+    "custom/window-name",
+    "wlr/workspaces",
   ],
 
   "modules-center": ["clock"],
   "modules-right": [
     "custom/pacman-update",
+    "backlight",
     "custom/notifications",
     "battery",
-    // "backlight",
     "pulseaudio",
     "network",
     "custom/airplane",
@@ -44,14 +40,14 @@
   },
 
   "clock": {
-    "format": "<b>{:%a, %d %b %Y • %R} </b>",
+    "format": "<b>{:%a, %d %b %Y • %R}</b>",
     "interval": 5,
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "on-click": "gnome-calendar"
   },
   "cpu": {
     "interval": 10,
-    "format": " {usage}%",
+    "format": " {usage}%",
     "max-length": 10,
     "tooltip": false
   },
@@ -97,11 +93,11 @@
       "critical": 15
     },
 	"format": "{icon} {capacity}%",
-        "format-charging": " {capacity}% [charging]",
-        "format-plugged": " {capacity}% [plugged]",
-        "format-alt": "{icon} {capacity}%",
-        "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""],
-        "max-length": 25,
+      "format-charging": "󱐋 {capacity}%",
+      "format-plugged": " {capacity}%",
+      "format-alt": "{icon} {capacity}%",
+      "format-icons": ["", "",  "", "", "", "", "", "", "", "", "", ""],
+      "max-length": 25,
       "tooltip": false
   },
   "custom/separator": {

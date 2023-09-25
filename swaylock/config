@@ -1,5 +1,6 @@
 ignore-empty-password
 show-failed-attempts
+hide-keyboard-layout
 font=DS-Digital
 font-size=120
 daemonize

@@ -1,5 +1,5 @@
 * {
-  padding: 0;
+  padding: 2px 0px 0px 0px;
   margin: 0;
   font-family: SF Mono Powerline, "Symbols Nerd Font"; 
   font-size: 16px;
@@ -7,14 +7,13 @@
 }
 
 window#waybar {
-  background: rgba(39, 39, 51, 0.6);
-  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
 }
 
 #custom-arch {
   font-size: 20px;
   color: #00bfff; /* deepskyblue */
-  padding: 0px 15px 0px 15px;
+  padding: 0px 16px;
 }
 
 #custom-notifications {
@@ -23,9 +22,10 @@ window#waybar {
 }
 
 #tray {
-    /* margin: 4px; */
     font-size: 8px;
 }
+
+
 tooltip {
   background: rgba(0, 0, 0, 0.9);
 }
@@ -38,32 +38,31 @@ tooltip label {
 #memory,
 #backlight,
 #battery,
+#network,
 #pulseaudio,
-#temperature {
+#temperature,
+#custom-pacman-update {
   font-size: 16px;
-  background: #363a4f;
   margin: 5px 0px 5px 0px;
+  border-radius: 16px;
+  padding: 0px 16px;
+  color: #0f0b0c;
 }
 
 #cpu {
-  color: #44c5fc;
-  padding: 0px 16px 0px 16px;
-  border-radius: 16px 0px 0px 16px;
+  background-color: #fe3c44;
 }
 
 #memory {
-  color: #8bf993;
-  padding: 0px 16px 0px 16px;
+  background-color: #FE5D40;
 }
 
 #temperature {
-  color: #fc6544;
-  padding: 0px 12px 0px 12px;
-  border-radius: 0px 16px 16px 0px;
+  background-color: #FD8343;
 }
 
 #custom-powermenu {
-  padding: 0px 16px 0px 16px;
+  padding: 0px 16px;
   border-radius: 16px;
 }
 
@@ -76,8 +75,7 @@ tooltip label {
 }
 
 #custom-pacman-update {
-  color: #8bd5ca;
-  margin-right: 5px;
+  background-color: #DCB157;
 }
 
 #workspaces button:nth-child(1) label {
@@ -110,31 +108,16 @@ tooltip label {
   margin: 0px 8px;
 }
 
+#backlight {
+  background-color: #B5B16D;
+}
+
 #battery {
-  color: #fcc244;
-  margin: 0px 10px 0px 0px;  
-  padding: 0px 16px 0px 16px;
-  border-radius: 16px 0px 0px 16px;
-}
-
-#pulseaudio,
-#battery,
-#backlight {
-  background: #363a4f;
-  margin: 5px 0px 5px 0px;
-}
-
-#backlight {
-  color: #eed49f;
-  padding: 0px 16px 0px 16px;
-  border-radius: 0px;
+  background-color: #68B398;
 }
 
 #pulseaudio {
-  color: #91d7e3;
-  padding: 0px 16px 0px 16px;
-  border-radius: 0px 16px 16px 0px;
-  font-size: 16px;
+  background-color: #2DB4B9;
 }
 
 #custom-right-arr {
@@ -142,12 +125,13 @@ tooltip label {
 }
 
 #network {
-  color: #c6a0f6;
-  margin: 0px 10px 0px 10px;
+  background-color: #21b2cb;
 }
 
 #clock {
-  margin: 0px 15px 0px 0px;
+    color: white;
+    border-radius: 20px;
+    padding: 8px;
 }
 
 #custom-dot {
@@ -156,4 +140,8 @@ tooltip label {
 
 #custom-dot-alt {
   color: #a5adcb;
+}
+
+#custom-window-name {
+  padding: 0px 16px;
 }
