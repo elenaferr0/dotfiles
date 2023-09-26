@@ -1,5 +1,7 @@
 # Hyprland rice dotfiles
 
+![](./screenshot/zsh.png)
+
 ![](./screenshot/plain.png)
 
 ![](./screenshots/neofetch.png)
