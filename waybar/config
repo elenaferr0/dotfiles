@@ -16,7 +16,8 @@
   "modules-center": ["clock"],
   "modules-right": [
     "custom/pacman-update",
-    "backlight",
+    // "backlight",
+    "custom/kb-layout",
     "custom/notifications",
     "battery",
     "pulseaudio",
@@ -38,7 +39,11 @@
     "icon-size": 40,
     "spacing": 10
   },
-
+  "custom/kb-layout": {
+    "format": "󰌌 {}",
+    "interval": 5,
+    "exec": "$HOME/.config/.scripts/kb_layout.sh",
+  },
   "clock": {
     "format": "<b>{:%a, %d %b %Y • %R}</b>",
     "interval": 5,
@@ -132,7 +137,6 @@
     "critical-threshold": 80,
     "format": "󰈸 {temperatureC}°C"
   },
-
   "custom/wrap-left": {
     "format": "<b>[</b>"
   },

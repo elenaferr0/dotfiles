@@ -1,4 +1,4 @@
-@define-color bg #161320;
+@define-color bg #ffffff;
 @define-color bg-hover #1E1E2E;
 @define-color blue #96CDFB;
 @define-color sky #89DCEB;
@@ -20,7 +20,7 @@
 #window {
   margin: 0px;
   border-radius: 20px;
-  background-color: @bg;
+  background-color: red;
   font-family: "SF Mono Powerline";
   font-size: 16px;
   font-weight: 800;
@@ -85,8 +85,6 @@
 #entry:selected {
   border-radius: 10px;
   background: #77deaf;
-  #background: rgb(119,222,175);
-  #background: linear-gradient(90deg, rgba(119,222,175,0.85) 10%, rgba(96,5,186,0.85) 100%); 
 }
 
 #text:selected {

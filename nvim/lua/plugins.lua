@@ -9,7 +9,10 @@ return require('packer').startup(function(use)
     use 'ryanoasis/vim-devicons'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { "nvim-telescope/telescope-live-grep-args.nvim" },
+        }
     }
     -- use {
     --     'nvim-telescope/telescope-file-browser.nvim',
@@ -44,4 +47,11 @@ return require('packer').startup(function(use)
         requires = { 'nvim-telescope/telescope.nvim' }
     }
     use { 'justinmk/vim-sneak' }
+    use {
+        'antosha417/nvim-lsp-file-operations',
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-tree.lua",
+        }
+    }
 end)

@@ -3,7 +3,7 @@
   margin: 0;
   font-family: SF Mono Powerline, "Symbols Nerd Font"; 
   font-size: 16px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 window#waybar {
@@ -37,6 +37,7 @@ tooltip label {
 #cpu,
 #memory,
 #backlight,
+#custom-kb-layout,
 #battery,
 #network,
 #pulseaudio,
@@ -109,6 +110,10 @@ tooltip label {
 }
 
 #backlight {
+  background-color: #B5B16D;
+}
+
+#custom-kb-layout {
   background-color: #B5B16D;
 }
 

@@ -15,6 +15,7 @@ echo "alacritty"
 cp -r $HOME/.config/alacritty/ .
 echo "zsh"
 cp $HOME/.zshrc .
+cp $HOME/.p10k.zsh .
 echo "swaylock"
 cp -r $HOME/.config/swaylock/ .
 echo "starship theme"
