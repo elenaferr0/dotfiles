@@ -22,3 +22,5 @@ echo "starship theme"
 cp ~/.config/starship.toml .
 echo "zathura"
 cp -r $HOME/.config/zathura/ .
+echo "eww"
+cp -r $HOME/.config/eww/ .

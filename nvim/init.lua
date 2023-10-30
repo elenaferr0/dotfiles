@@ -472,3 +472,9 @@ local function tree_actions_menu(node)
 end
 
 vim.keymap.set("n", "<C-P>", tree_actions_menu, { buffer = buffer, noremap = true, silent = true })
+
+require 'nvim-treesitter.configs'.setup {
+    autotag = {
+        enable = true,
+    }
+}

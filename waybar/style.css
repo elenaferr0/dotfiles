@@ -79,34 +79,33 @@ tooltip label {
   background-color: #DCB157;
 }
 
+#workspaces button label {
+  margin: 0px 5px;
+  padding: 0px 0px 5px 0px;
+}
+
 #workspaces button:nth-child(1) label {
   color: #8aadf4;
-  margin: 0px 8px;
 }
 
 #workspaces button:nth-child(2) label {
   color: #ed8796;
-  margin: 0px 8px;
 }
 
 #workspaces button:nth-child(3) label {
   color: #a6da95;
-  margin: 0px 8px;
 }
 
 #workspaces button:nth-child(4) label {
   color: #c6a0f6;
-  margin: 0px 8px;
 }
 
 #workspaces button:nth-child(5) label {
   color: #f4dbd6;
-  margin: 0px 8px;
 }
 
 #workspaces button:nth-child(6) label {
   color: #f5a97f;
-  margin: 0px 8px;
 }
 
 #backlight {
