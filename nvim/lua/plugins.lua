@@ -1,8 +1,8 @@
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    -- use { 'catppuccin/nvim', as = 'catppuccin' }
-    use 'dasupradyumna/midnight.nvim'
+    use { 'catppuccin/nvim', as = 'catppuccin' }
+    -- use 'dasupradyumna/midnight.nvim'
     use 'lukas-reineke/lsp-format.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'ryanoasis/vim-devicons'
@@ -50,4 +50,5 @@ return require('packer').startup(function(use)
         "nvim-tree/nvim-tree.lua",
       }
     }
+    use 'nyoom-engineering/nyoom.nvim'
 end)

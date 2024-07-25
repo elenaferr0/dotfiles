@@ -1,7 +1,8 @@
--- require("catppuccin").setup({
---     flavour = "mocha",
---     transparent_background = true
--- })
+require("catppuccin").setup({
+    flavour = "mocha",
+    transparent_background = true
+})
+
 
 require 'visimp' {
     autopairs = {},
@@ -11,58 +12,51 @@ require 'visimp' {
     },
     gitsigns = {},
     icons = {},
-    -- languages = {
-    --     'c',
-    --     'java',
-    --     'javascript',
-    --     'json',
-    --     'latex',
-    --     'python',
-    --     'lua'
-    -- }
+    languages = {
+        'typst',
+        'dart'
+    },
+    nvimtree = {
+        sort_by = "case_sensitive",
+        view = {
+            width = 30,
+        },
+        renderer = {
+            group_empty = true,
+            icons = {
+                glyphs = {
+                    default = "",
+                    symlink = "",
+                    git = {
+                        unstaged = "",
+                        staged = "S",
+                        unmerged = "",
+                        renamed = "➜",
+                        deleted = "",
+                        untracked = "U",
+                        ignored = "◌",
+                    },
+                    folder = {
+                        -- arrow_open = " ",
+                        -- arrow_closed = "",
+                        default = "",
+                        open = "",
+                        empty = "",
+                        empty_open = "",
+                        symlink = "",
+                    },
+                },
+            }
+        },
+        hijack_directories = {
+            enable = true,
+            auto_open = true,
+        },
+        filters = {
+            dotfiles = false,
+        },
+    }
 }
-
-require("nvim-tree").setup({
-    sort_by = "case_sensitive",
-    view = {
-        width = 30,
-    },
-    renderer = {
-        group_empty = true,
-        icons = {
-            glyphs = {
-                default = "",
-                symlink = "",
-                git = {
-                    unstaged = "",
-                    staged = "S",
-                    unmerged = "",
-                    renamed = "➜",
-                    deleted = "",
-                    untracked = "U",
-                    ignored = "◌",
-                },
-                folder = {
-                    -- arrow_open = " ",
-                    -- arrow_closed = "",
-                    default = "",
-                    open = "",
-                    empty = "",
-                    empty_open = "",
-                    symlink = "",
-                },
-            },
-        }
-    },
-    hijack_directories = {
-        enable = true,
-        auto_open = true,
-    },
-    filters = {
-        dotfiles = false,
-    },
-})
-
 
 local tabline = require('tabline')
 
@@ -105,7 +99,7 @@ local lualine_config = {
 require('lualine').setup(lualine_config)
 
 
-vim.cmd.colorscheme 'midnight'
+vim.cmd.colorscheme 'catppuccin'
 vim.o.relativenumber = true
 vim.o.number = true
 vim.opt.colorcolumn = '80'
@@ -113,15 +107,6 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.cmd("set splitbelow")
-
--- disable arrow keys
-local arrow_keys = { '<Up>', '<Down>', '<Left>', '<Right>' }
-for _, key in ipairs(arrow_keys) do
-    vim.api.nvim_set_keymap('n', key, '<Nop>', { noremap = true })
-    -- vim.api.nvim_set_keymap('c', key, '<Nop>', { noremap = true })
-    -- vim.api.nvim_set_keymap('i', key, '<Nop>', { noremap = true })
-    vim.api.nvim_set_keymap('v', key, '<Nop>', { noremap = true })
-end
 
 -- telescope
 local telescope = require('telescope')

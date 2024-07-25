@@ -4,8 +4,6 @@ sudo yabai --load-sa
 defaults write com.apple.dock autohide-delay -float 9999; killall Dock
 killall com.apple.dock.extra
 
-
-yabai -m window --toggle border
 yabai -m config layout bsp
 yabai -m config window_placement second_child
 yabai -m config window_origin_display focus
@@ -13,7 +11,7 @@ yabai -m config window_topmost on
 yabai -m config window_shadow float
 yabai -m config window_opacity on
 yabai -m config window_border        on
-yabai -m config window_border_blur   on
+yabai -m config window_border_blur   off
 yabai -m config window_border_width  2
 yabai -m config window_border_radius 10
 yabai -m config active_window_border_color 0xFFf92778
@@ -35,4 +33,4 @@ yabai -m config focus_follows_mouse autoraise
 yabai -m config mouse_follows_focus on
 
 yabai -m rule --add app="^System Settings$" manage=off sticky=on
-yabai -m config external_bar all:30:0
+yabai -m config external_bar all:0:0
