@@ -1,0 +1,15 @@
+[colors.primary]
+background = "#000000"
+
+[font.normal]
+family = "SF Mono Powerline"
+
+[selection]
+save_to_clipboard = false
+
+[window]
+opacity = 0.70
+
+[window.padding]
+x = 15
+y = 15

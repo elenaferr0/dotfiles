@@ -27,6 +27,8 @@ export EDITOR='nvim'
 # export SUDO_EDITOR='nvim'
 alias vi=nvim
 alias py=python
+alias php=php81
+alias pdflatex='pdflatex -interaction=batchmode'
 eval "$(starship init zsh)"
 export PATH="$PATH:$HOME/flutter/bin"
 export PATH="$PATH:$HOME/.pub-cache/bin"
@@ -42,3 +44,11 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias dup="docker-compose --profile local up -d"
+alias dupb="docker-compose --profile local up --build -d"
+alias dst="docker-compose --profile local stop"
+alias dwn="docker-compose --profile local down"
+alias drm="docker-compose --profile local rm"
+
+eval "$(pyenv init -)"

@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
     -- use "rebelot/kanagawa.nvim"
     use 'folke/lsp-colors.nvim'
     use 'lukas-reineke/lsp-format.nvim'
-    use 'nvim-tree/nvim-tree.lua'
     use 'ryanoasis/vim-devicons'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
@@ -14,10 +13,6 @@ return require('packer').startup(function(use)
             { "nvim-telescope/telescope-live-grep-args.nvim" },
         }
     }
-    -- use {
-    --     'nvim-telescope/telescope-file-browser.nvim',
-    --     requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
-    -- }
     use 'tpope/vim-surround'
     use {
         'nvim-lualine/lualine.nvim',
@@ -51,8 +46,9 @@ return require('packer').startup(function(use)
         'antosha417/nvim-lsp-file-operations',
         requires = {
             "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-tree.lua",
+            -- "nvim-tree/nvim-tree.lua",
         }
     }
     use { 'windwp/nvim-ts-autotag' }
+    use { 'kaarmu/typst.vim', ft = { 'typst' } }
 end)
