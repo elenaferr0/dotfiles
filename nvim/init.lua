@@ -396,9 +396,9 @@ vim.keymap.set("n", "<C-P>", tree_actions_menu, { buffer = buffer, noremap = tru
 vim.g.typst_syntax_highlight = 1
 vim.g.typst_pdf_viewer = "zathura"
 
-require 'lspconfig'.typst_lsp.setup {
-    settings = {
-        exportPdf = "never" -- Choose onType, onSave or never.
-        -- serverPath = "" -- Normally, there is no need to uncomment it.
-    }
-}
+-- require 'lspconfig'.typst_lsp.setup {
+--     settings = {
+--         exportPdf = "never" -- Choose onType, onSave or never.
+--         -- serverPath = "" -- Normally, there is no need to uncomment it.
+--     }
+-- }

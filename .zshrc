@@ -40,6 +40,8 @@ export PATH="$PATH:$ANDROID_HOME"
 export PATH=~/Android/Sdk/platform-tools:$PATH
 export PATH=~/Android/Sdk/tools:$PATH
 export PATH=~/Android/ndk-build:$PATH
+export PATH=~/.cargo/bin:$PATH
+
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -52,3 +54,4 @@ alias dwn="docker-compose --profile local down"
 alias drm="docker-compose --profile local rm"
 
 eval "$(pyenv init -)"
+export LD_LIBRARY_PATH=/usr/lib/ 

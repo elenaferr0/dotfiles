@@ -29,13 +29,6 @@ return require('packer').startup(function(use)
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
     use 'tpope/vim-repeat'
     use 'rcarriga/nvim-notify'
-    use {
-        'akinsho/flutter-tools.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim',
-            'stevearc/dressing.nvim', -- optional for vim.ui.select
-        },
-    }
     use { "akinsho/toggleterm.nvim", tag = '*' }
     use {
         'renerocksai/telekasten.nvim',
@@ -51,4 +44,5 @@ return require('packer').startup(function(use)
     }
     use { 'windwp/nvim-ts-autotag' }
     use { 'kaarmu/typst.vim', ft = { 'typst' } }
+    use { 'tpope/vim-sleuth' }
 end)
