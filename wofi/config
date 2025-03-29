@@ -1,14 +1,1 @@
-stylesheet=style.css
-show=drun
-matching=fuzzy
-no_actions=true
-width=550
-height=325
-always_parse_args=true
-show_all=true
-print_command=true
-layer=overlay
-insensitive=true
-prompt=Search...
-allow_markup=true
-allow_images=true
+/nix/store/730445566rr10q6dha843iz659wdn46p-home-manager-files/.config/wofi/config

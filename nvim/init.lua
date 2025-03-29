@@ -1,31 +1,17 @@
-require("catppuccin").setup({
-    flavour = "mocha",
-    transparent_background = true
-})
-
 require 'visimp' {
     autopairs = {},
-    comment = {},
-    latex = {
-        texlive = true
-    },
+    -- comment = {},
     lsp = {},
     lspsignature = {},
     lspformat = {},
-    -- blankline = {},
+    blankline = {},
     gitsigns = {},
     icons = {},
     languages = {
-        'c',
-        'java',
-        'javascript',
         'json',
-        'latex',
         'python',
-        'lua',
         'bash',
-        'dart',
-        -- 'typst'
+        'typst'
     },
     nvimtree = {
         sort_by = "case_sensitive",
@@ -149,7 +135,6 @@ require 'visimp' {
 
 
 local tabline = require('tabline')
-
 local tabline_config = {
     enable = true,
     options = {
@@ -177,20 +162,11 @@ local lualine_config = {
         lualine_y = { 'progress' },
         lualine_z = { 'location' }
     },
-    -- tabline = {
-    --     lualine_a = {},
-    --     lualine_b = {},
-    --     lualine_c = { tabline.tabline_buffers },
-    --     lualine_x = { tabline.tabline_tabs },
-    --     lualine_y = {},
-    --     lualine_z = {},
-    -- }
 }
+
 require('lualine').setup(lualine_config)
 
--- vim.cmd.colorscheme "nord"
--- vim.g.nord_disable_background = true
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "default"
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.colorcolumn = '0'
@@ -198,7 +174,12 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.cmd("set splitbelow")
--- vim.cmd("autocmd BufWritePost *.md silent! !pandoc -f markdown -t pdf -o %:t:r.pdf %:t:r.md")
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
@@ -239,20 +220,18 @@ vim.notify = function(msg, ...)
     notify(msg, ...)
 end
 
-require("flutter-tools").setup {}
-
-require("toggleterm").setup({
-    size = function(term)
-        if term.direction == "horizontal" then
-            return 15
-        elseif term.direction == "vertical" then
-            return vim.o.columns * 0.4
-        end
-    end,
-    autochdir = true,
-    autoscroll = true,
-    open_mapping = [[<c-\>]],
-})
+-- require("toggleterm").setup({
+--     size = function(term)
+--         if term.direction == "horizontal" then
+--             return 15
+--         elseif term.direction == "vertical" then
+--             return vim.o.columns * 0.4
+--         end
+--     end,
+--     autochdir = true,
+--     autoscroll = true,
+--     open_mapping = [[<c-\>]],
+-- })
 
 
 -- vim.cmd(':nmap <F1> <nop>')
@@ -296,7 +275,7 @@ function _G.set_terminal_keymaps()
     vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]], opts)
 end
 
-require("lsp-file-operations").setup()
+-- require("lsp-file-operations").setup()
 
 local tree_api = require("nvim-tree.api")
 local tree_actions = {
@@ -386,19 +365,12 @@ local function tree_actions_menu(node)
 end
 
 vim.keymap.set("n", "<C-P>", tree_actions_menu, { buffer = buffer, noremap = true, silent = true })
-
--- require 'nvim-treesitter.configs'.setup {
---     autotag = {
---         enable = true,
---     }
--- }
-
 vim.g.typst_syntax_highlight = 1
 vim.g.typst_pdf_viewer = "zathura"
-
--- require 'lspconfig'.typst_lsp.setup {
---     settings = {
---         exportPdf = "never" -- Choose onType, onSave or never.
---         -- serverPath = "" -- Normally, there is no need to uncomment it.
---     }
--- }
+-- Set commentstring for Typst files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "typst",
+    callback = function()
+        vim.bo.commentstring = "// %s"
+    end
+})
