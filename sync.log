@@ -1,0 +1,23 @@
+2025-08-14 23:37:51 - === Push to Repository Started ===
+2025-08-14 23:37:51 - Repository directory: /home/elena/Documents/projects/dotfiles
+2025-08-14 23:37:51 - Home directory: /home/elena
+2025-08-14 23:38:16 - === Push to Repository Started ===
+2025-08-14 23:38:16 - Repository directory: /home/elena/Documents/projects/dotfiles
+2025-08-14 23:38:16 - Home directory: /home/elena
+2025-08-14 23:38:16 - ERROR: Waybar - failed to copy /home/elena/.config/waybar to /home/elena/Documents/projects/dotfiles/waybar
+2025-08-14 23:38:23 - === Push to Repository Started ===
+2025-08-14 23:38:23 - Repository directory: /home/elena/Documents/projects/dotfiles
+2025-08-14 23:38:23 - Home directory: /home/elena
+2025-08-14 23:38:23 - SUCCESS: Waybar - /home/elena/.config/waybar -> /home/elena/Documents/projects/dotfiles/waybar
+2025-08-14 23:38:23 - SUCCESS: Wofi - /home/elena/.config/wofi -> /home/elena/Documents/projects/dotfiles/wofi
+2025-08-14 23:38:23 - SKIPPED: Neovim plugins - source not found: /home/elena/.config/nvim/lua/plugins.lua
+2025-08-14 23:38:23 - SUCCESS: Wpaperd - /home/elena/.config/wpaperd -> /home/elena/Documents/projects/dotfiles/wpaperd
+2025-08-14 23:38:23 - SUCCESS: Hyprland - /home/elena/.config/hypr -> /home/elena/Documents/projects/dotfiles/hypr
+2025-08-14 23:38:23 - SUCCESS: Starship - /home/elena/.config/starship.toml -> /home/elena/Documents/projects/dotfiles/starship.toml
+2025-08-14 23:38:23 - SUCCESS: Zathura - /home/elena/.config/zathura -> /home/elena/Documents/projects/dotfiles/zathura
+2025-08-14 23:38:23 - SUCCESS: Alacritty - /home/elena/.config/alacritty -> /home/elena/Documents/projects/dotfiles/alacritty
+2025-08-14 23:38:23 - SKIPPED: Neovim init - source not found: /home/elena/.config/nvim/init.lua
+2025-08-14 23:38:23 - SUCCESS: Zsh config - /home/elena/.zshrc -> /home/elena/Documents/projects/dotfiles/.zshrc
+2025-08-14 23:38:23 - SUCCESS: Powerlevel10k - /home/elena/.p10k.zsh -> /home/elena/Documents/projects/dotfiles/.p10k.zsh
+2025-08-14 23:38:23 - SKIPPED: Dunst - source not found: /home/elena/.config/dunst
+2025-08-14 23:38:23 - === Push completed with 0 failures ===

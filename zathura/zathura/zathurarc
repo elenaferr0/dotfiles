@@ -1,0 +1,25 @@
+set selection-clipboard clipboard
+set font "Your Regular Font 12"
+set recolor true
+set default-bg "#000000"
+set default-fg "#FFFFFF"
+
+# Uncomment and customize these colors as needed:
+# set statusbar-bg "#surface_container_color"
+# set statusbar-fg "#on_surface_variant_color"
+# set inputbar-bg "#surface_color"
+# set inputbar-fg "#on_secondary_color"
+# set notification-bg "#surface_color"
+# set notification-fg "#on_secondary_color"
+# set notification-error-bg "#error_color"
+# set notification-error-fg "#on_error_color"
+# set notification-warning-bg "#error_color"
+# set notification-warning-fg "#on_error_color"
+# set highlight-color "#tertiary_color"
+# set highlight-active-color "#secondary_color"
+# set completion-bg "#surface_bright_color"
+# set completion-fg "#on_surface_color"
+# set completion-highlight-bg "#secondary_color"
+# set completion-highlight-fg "#on_secondary_color"
+# set recolor-lightcolor "#surface_color"
+# set recolor-darkcolor "#inverse_surface_color"

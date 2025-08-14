@@ -1,0 +1,19 @@
+[default]
+path = "~/Pictures/wallpapers"
+duration = "30m"
+mode = "center"
+sorting = "random"
+
+apply-shadow = true
+shadow-color = "#000000"
+
+# Optional: Different settings for specific monitors
+# [DP-1]
+# path = "/path/to/your/wallpaper/folder"
+# duration = "15m"
+# mode = "crop"
+#
+# [HDMI-A-1]
+# path = "/path/to/different/wallpaper/folder"
+# duration = "45m"
+# mode = "fit"
