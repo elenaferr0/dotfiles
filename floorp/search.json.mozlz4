@@ -1,0 +1,34 @@
+{
+  "version": 6,
+  "engines": [
+    {
+      "id": "ddg@search.mozilla.org",
+      "name": "DuckDuckGo",
+      "isAppProvided": true,
+      "_metaData": {
+        "order": 1
+      }
+    },
+    {
+      "id": "google@search.mozilla.org", 
+      "name": "Google",
+      "isAppProvided": true,
+      "_metaData": {
+        "order": 2
+      }
+    },
+    {
+      "id": "bing@search.mozilla.org",
+      "name": "Bing", 
+      "isAppProvided": true,
+      "_metaData": {
+        "hidden": true
+      }
+    }
+  ],
+  "metaData": {
+    "current": "ddg@search.mozilla.org",
+    "private": "ddg@search.mozilla.org",
+    "hash": "generated_hash_value"
+  }
+}
