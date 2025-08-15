@@ -1,0 +1,14 @@
+width=300
+height=200
+location=center
+show=dmenu
+prompt=Power Menu
+filter_rate=100
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+insensitive=false
+allow_images=false
+gtk_dark=false
