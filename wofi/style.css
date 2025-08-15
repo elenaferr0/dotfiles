@@ -1,0 +1,89 @@
+window {
+    margin: 0px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.95);
+    font-family: "BlexMono Nerd Font Propo";
+    font-size: 14px;
+    backdrop-filter: blur(20px);
+}
+
+#input {
+    margin: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    background-color: rgba(45, 45, 45, 0.8);
+    border-radius: 0.75em;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#input:selected {
+    outline: none;
+};
+
+#input:focus {
+    border-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+#inner-box {
+    margin: 0px 12px 12px 12px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#text {
+    margin: 8px 12px;
+    border: none;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+#text:selected {
+    color: black;
+}
+
+#entry {
+    margin: 2px 0px;
+    border: none;
+    border-radius: 0.75em;
+    background-color: transparent;
+    color: black;
+    min-height: 40px;
+    padding: 0px 8px;
+}
+
+#entry:selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: none;
+    color: #ffffff;
+}
+
+#entry:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#entry:selected:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+#img {
+    margin-right: 12px;
+    padding: 0px;
+}
