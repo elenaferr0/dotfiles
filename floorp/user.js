@@ -106,3 +106,7 @@ user_pref("browser.uiCustomization.state", "{\"currentVersion\":20,\"newElementC
 
 // Theme
 user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("font.name.monospace.x-western", "BlexMono Nerd Font Mono")
+user_pref("font.name.sans-serif.x-western", "IBM Plex Sans")
+user_pref("font.name.serif.x-western", "IBM Plex Serif")
