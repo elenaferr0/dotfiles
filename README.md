@@ -1,10 +1,10 @@
 # Hyprland rice dotfiles
 
-![](./screenshots/zsh.png)
+## Run menu
+![](./screenshots/1755266429.png)
 
-![](./screenshots/nvim.png)
+## Power menu
+![](./screenshots/1755266569.png)
 
-![](./screenshots/powermenu.png)
-
-![](./screenshots/wofi_dunst.png)
-
+## Alacritty & P10k
+![](./screenshots/1755266448.png)
