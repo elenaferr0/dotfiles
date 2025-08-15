@@ -2,7 +2,7 @@
   // Basic waybar configuration
   "exclusive": true,
   "passthrough": false,
-  "height": 36,
+  "height": 40,
   "margin": "6",
   "position": "top",
   
