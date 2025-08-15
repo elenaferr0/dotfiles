@@ -1,6 +1,6 @@
 * {
-  font-family: "IBM Plex Sans";
-  font-size: 12pt;
+  font-family: "BlexMono Nerd Font Propo";
+  font-size: 10.5pt;
   padding: 0;
   margin: 0 0.4em;
 }
@@ -42,7 +42,7 @@ window#waybar {
 }
 
 #custom-menu {
-  padding-right: 1.5em;
+  padding-right: 1em;
   padding-left: 1em;
   margin-right: 0;
   border-radius: 0.5em;

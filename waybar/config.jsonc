@@ -1,0 +1,118 @@
+{
+  // Basic waybar configuration
+  "exclusive": true,
+  "passthrough": false,
+  "height": 36,
+  "margin": "6",
+  "position": "top",
+  
+  // Module layout
+  "modules-left": [
+    "custom/menu",
+    "custom/hostname", 
+    "cpu",
+    "memory",
+    "wlr/workspaces"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "hyprland/language",
+    "network",
+    "pulseaudio",
+    "battery"
+  ],
+
+  // Workspaces configuration
+  "wlr/workspaces": {
+    "format": "{name}",
+    "on-click": "activate"
+  },
+
+  // Language switcher
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "US",
+    "format-it": "IT"
+  },
+
+  // Clock configuration
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M - %a %b %d }",
+    "format-alt": "{:%Y-%m-%d %H:%M %z}",
+    "on-click-left": "mode",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  // System monitoring
+  "cpu": {
+    "format": " {usage}%"
+  },
+
+  "memory": {
+    "format": " {}%",
+    "interval": 5
+  },
+
+  // Audio controls
+  "pulseaudio": {
+    "format-source": "󰍬 {volume}%",
+    "format-source-muted": "󰍭 0%",
+    "format": "{icon} {volume}% {format_source}",
+    "format-muted": "󰸈 0% {format_source}",
+    "format-icons": {
+      "default": [
+          "󰕿",
+          "󰖀",
+          "󰕾"
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  // Battery indicator
+  "battery": {
+    "bat": "BAT0",
+    "interval": 10,
+    "format-icons": [
+         "󰁺",
+         "󰁻",
+         "󰁼",
+         "󰁽",
+         "󰁾",
+         "󰁿",
+         "󰂀",
+         "󰂁",
+         "󰂂",
+         "󰁹"
+    ],
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%"
+  },
+
+  // Network status
+  "network": {
+    "interval": 3,
+    "format-wifi": " {essid}",
+    "format-ethernet": "󰈁 Wired",
+    "format-disconnected": "󱚼 Disconnected",
+    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}\nUp: {bandwidthUpBits}\nDown: {bandwidthDownBits}"
+  },
+
+  "custom/menu": {
+    // "interval": 1,
+    // // "return-type": "json",
+    // "exec": "jq -cn --arg text \"ïŒ\" --arg tooltip \"$(grep PRETTY_NAME /etc/os-release | cut -d '\"' -f2)\" --arg alt \"\" --arg class \"$(if hyprctl activewindow -j | jq -e '.fullscreen' &>/dev/null 2>&1; then echo fullscreen; fi)\" --arg percentage \"\" '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'",
+    "format": "󰣇 {}"
+  },
+
+  // Hostname display
+  "custom/hostname": {
+    "exec": "echo \"$USER@$HOSTNAME\"",
+    "on-click": "systemctl --user restart waybar",
+    "format": "{}"
+  }
+}
