@@ -110,3 +110,8 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("font.name.monospace.x-western", "BlexMono Nerd Font Mono")
 user_pref("font.name.sans-serif.x-western", "IBM Plex Sans")
 user_pref("font.name.serif.x-western", "IBM Plex Serif")
+
+// Disable workspaces
+user_pref("floorp.workspaces.enabled", false)
+user_pref("floorp.workspaces.v4.store", {})
+user_pref("widget.disable-workspace-management", true)
