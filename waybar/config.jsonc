@@ -20,6 +20,7 @@
 
   "modules-right": [
     "hyprland/language",
+    "custom/tailscale",
     "network",
     "pulseaudio",
     "battery"
@@ -103,10 +104,13 @@
   },
 
   "custom/menu": {
-    // "interval": 1,
-    // // "return-type": "json",
-    // "exec": "jq -cn --arg text \"ïŒ\" --arg tooltip \"$(grep PRETTY_NAME /etc/os-release | cut -d '\"' -f2)\" --arg alt \"\" --arg class \"$(if hyprctl activewindow -j | jq -e '.fullscreen' &>/dev/null 2>&1; then echo fullscreen; fi)\" --arg percentage \"\" '{text:$text,tooltip:$tooltip,alt:$alt,class:$class,percentage:$percentage}'",
     "format": "󰣇 {}"
+  },
+
+  "custom/tailscale": {
+    "interval": 1,
+    "exec": "~/.config/waybar/scripts/tailscale.sh",
+    "format": "󰌆 {}",
   },
 
   // Hostname display
