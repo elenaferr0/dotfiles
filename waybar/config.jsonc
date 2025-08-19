@@ -12,7 +12,7 @@
     "custom/hostname", 
     "cpu",
     "memory",
-    "wlr/workspaces"
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock"
@@ -27,7 +27,7 @@
   ],
 
   // Workspaces configuration
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{name}",
     "on-click": "activate"
   },
