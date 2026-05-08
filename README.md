@@ -1,3 +1,5 @@
+> ⚠️ This repo has been migrated to Codeberg https://codeberg.org/elenaferr0/dotfiles
+
 # Hyprland rice dotfiles
 
 ## Run menu
